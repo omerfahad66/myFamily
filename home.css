@@ -1,0 +1,86 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+a.box img{
+    height: 300px;
+    width: 400px;
+    border: 3px solid white;
+    margin: 30px;
+    transition: all 0.8s;
+}
+
+a.box img:hover{
+    transform: scale(1.1);
+    transform: rotate(10deg);
+    transition: all 0.8s;
+}
+
+.box-target{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    position: fixed;
+    top: -100%;
+    transition: all 0.8s;
+}
+
+.box-target img{
+    position: absolute;
+    width: 900px;
+    height: 700px;
+    border: 3px solid white;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+a.box-close{
+    display: block;
+    height: 50px;
+    width: 50px;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    right: 0%;
+    top: -80px;
+    background: url(/close.png);
+    background-size: cover;
+}
+
+.box-target:target{
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    transition: all 0.8s;
+}
+
+.box-target:target img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.box-target:target a.box-close{
+    top: 0px;
+}
+
+/* this code is for moment section only */
+
+a.box1 img{
+    height: 300px;
+    width: 400px;
+    border: 3px solid white;
+    margin: 30px;
+    transition: all 0.8s;
+}
+
+a.box1 img:hover{
+    transform: scale(1.1);
+    transform: rotate(-10deg);
+    transition: all 0.8s;
+}
